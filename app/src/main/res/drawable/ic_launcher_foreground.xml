@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- خلفية دائرية ملونة -->
+    <path
+        android:fillColor="#E94560"
+        android:pathData="M54,54m-44,0a44,44 0,1 1,88 0a44,44 0,1 1,-88 0" />
+
+    <!-- رمز لوحة مفاتيح مبسّط -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,38 L78,38 Q80,38 80,40 L80,68 Q80,70 78,70 L30,70 Q28,70 28,68 L28,40 Q28,38 30,38Z
+                          M34,44 L40,44 L40,50 L34,50 Z
+                          M44,44 L50,44 L50,50 L44,50 Z
+                          M54,44 L60,44 L60,50 L54,50 Z
+                          M64,44 L74,44 L74,50 L64,50 Z
+                          M34,54 L40,54 L40,60 L34,60 Z
+                          M44,54 L50,54 L50,60 L44,60 Z
+                          M54,54 L60,54 L60,60 L54,60 Z
+                          M64,54 L74,54 L74,60 L64,60 Z
+                          M34,63 L74,63 L74,67 L34,67 Z" />
+</vector>

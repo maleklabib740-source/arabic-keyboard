@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dialog إضافة/تعديل كتابة تلقائية -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/surface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_medium">
+
+        <!-- حقل الاختصار المُشغِّل -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="الاختصار المُشغِّل"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/text_small"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/et_trigger_shortcut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_auto_shortcut"
+            android:textColor="@color/on_surface"
+            android:textColorHint="@color/text_secondary"
+            android:background="@drawable/bg_input_field"
+            android:padding="12dp"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textSize="@dimen/text_large"
+            android:layout_marginBottom="@dimen/margin_medium" />
+
+        <!-- حقل النص الكامل -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="النص الكامل للكتابة التلقائية"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/text_small"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/et_full_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_auto_text"
+            android:textColor="@color/on_surface"
+            android:textColorHint="@color/text_secondary"
+            android:background="@drawable/bg_input_field"
+            android:padding="12dp"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:maxLines="8"
+            android:textSize="@dimen/text_medium"
+            android:gravity="start|top"
+            android:textAlignment="viewStart"
+            android:layout_marginBottom="@dimen/margin_medium" />
+
+        <!-- شريط السرعة -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/typing_speed_label"
+                android:textColor="@color/text_secondary"
+                android:textSize="@dimen/text_small" />
+
+            <TextView
+                android:id="@+id/tv_speed_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50 ms"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/text_small"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/margin_medium">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/speed_fast"
+                android:textColor="@color/text_secondary"
+                android:textSize="@dimen/text_small"
+                android:layout_marginEnd="8dp" />
+
+            <SeekBar
+                android:id="@+id/seekbar_speed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="190"
+                android:progress="40"
+                android:progressTint="@color/primary"
+                android:thumbTint="@color/primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/speed_slow"
+                android:textColor="@color/text_secondary"
+                android:textSize="@dimen/text_small"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- ملاحظة: لا يضغط إرسال -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ملاحظة: بعد انتهاء الكتابة لن يُضغط زر الإرسال، المستخدم هو من يرسل."
+            android:textColor="@color/success"
+            android:textSize="@dimen/text_small"
+            android:layout_marginBottom="@dimen/margin_medium" />
+
+        <!-- رسالة الخطأ -->
+        <TextView
+            android:id="@+id/tv_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/error_color"
+            android:textSize="@dimen/text_small"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/margin_small" />
+
+        <!-- الأزرار -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_cancel"
+                android:background="@android:color/transparent"
+                android:textColor="@color/text_secondary"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_save"
+                android:background="@drawable/bg_button_primary"
+                android:textColor="@color/on_primary"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Arabic Keyboard</string>
+    <string name="keyboard_label">لوحة مفاتيح عربية</string>
+    <string name="subtype_arabic">العربية</string>
+    <string name="subtype_english">English</string>
+
+    <!-- MainActivity -->
+    <string name="main_title">لوحة مفاتيح عربية</string>
+    <string name="main_subtitle">لوحة مفاتيح ذكية بالعربية والإنجليزية</string>
+    <string name="step1_title">الخطوة 1: تفعيل لوحة المفاتيح</string>
+    <string name="step1_desc">افتح الإعدادات وفعّل «لوحة مفاتيح عربية» ضمن لوحات المفاتيح المُثبَّتة</string>
+    <string name="step2_title">الخطوة 2: اختيار لوحة المفاتيح الافتراضية</string>
+    <string name="step2_desc">اضغط هنا لتعيين «لوحة مفاتيح عربية» كلوحة المفاتيح الافتراضية</string>
+    <string name="btn_enable_keyboard">تفعيل لوحة المفاتيح</string>
+    <string name="btn_set_default">تعيين كافتراضية</string>
+    <string name="btn_open_settings">إعدادات لوحة المفاتيح</string>
+    <string name="status_enabled">✓ مُفعَّلة</string>
+    <string name="status_not_enabled">غير مُفعَّلة</string>
+    <string name="status_default">✓ افتراضية</string>
+    <string name="status_not_default">غير افتراضية</string>
+
+    <!-- Settings -->
+    <string name="settings_title">إعدادات لوحة المفاتيح</string>
+    <string name="shortcuts_title">اختصارات النصوص</string>
+    <string name="shortcuts_desc">أضف اختصارات لتوسيعها تلقائياً عند الكتابة</string>
+    <string name="space_replacement_title">استبدال زر المسافة</string>
+    <string name="space_replacement_desc">استبدل زر المسافة برمز مخصص</string>
+    <string name="auto_typing_title">الكتابة التلقائية</string>
+    <string name="auto_typing_desc">اكتب نصاً طويلاً تلقائياً عند إدخال اختصار</string>
+
+    <!-- Shortcuts Dialog -->
+    <string name="add_shortcut">إضافة اختصار</string>
+    <string name="edit_shortcut">تعديل اختصار</string>
+    <string name="hint_original_word">الكلمة الأصلية (المطوّلة)</string>
+    <string name="hint_shortcut">الاختصار</string>
+    <string name="example_shortcut_hint">مثال: اكتب «هنف» ليتحول إلى «عامل إيه»</string>
+    <string name="no_shortcuts">لا توجد اختصارات بعد\nاضغط + لإضافة اختصار</string>
+
+    <!-- Space Replacement -->
+    <string name="space_replacement_enabled">تفعيل استبدال المسافة</string>
+    <string name="hint_replacement_char">أدخل الرمز البديل (حرف واحد)</string>
+    <string name="example_space_hint">مثال: أدخل + ليكتب + بدلاً من المسافة</string>
+
+    <!-- Auto Typing Dialog -->
+    <string name="add_auto_typing">إضافة كتابة تلقائية</string>
+    <string name="edit_auto_typing">تعديل كتابة تلقائية</string>
+    <string name="hint_auto_shortcut">الاختصار المُشغِّل</string>
+    <string name="hint_auto_text">النص الكامل للكتابة التلقائية</string>
+    <string name="typing_speed_label">سرعة الكتابة</string>
+    <string name="speed_slow">بطيء</string>
+    <string name="speed_fast">سريع</string>
+    <string name="no_auto_typing">لا توجد كتابة تلقائية بعد\nاضغط + لإضافة واحدة</string>
+
+    <!-- Buttons -->
+    <string name="btn_save">حفظ</string>
+    <string name="btn_cancel">إلغاء</string>
+    <string name="btn_add">إضافة</string>
+    <string name="btn_edit">تعديل</string>
+    <string name="btn_delete">حذف</string>
+    <string name="btn_confirm_delete">تأكيد الحذف</string>
+    <string name="delete_confirm_msg">هل تريد حذف هذا العنصر؟</string>
+
+    <!-- Errors -->
+    <string name="error_empty_fields">يرجى ملء جميع الحقول</string>
+    <string name="error_single_char">يجب أن يكون الرمز البديل حرفاً واحداً فقط</string>
+    <string name="error_duplicate_shortcut">هذا الاختصار موجود بالفعل</string>
+</resources>

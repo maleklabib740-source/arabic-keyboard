@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dialog إضافة/تعديل اختصار -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_medium"
+    android:background="@color/surface">
+
+    <!-- حقل الكلمة الأصلية -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="الكلمة الأصلية (المطوّلة)"
+        android:textColor="@color/text_secondary"
+        android:textSize="@dimen/text_small"
+        android:layout_marginBottom="6dp" />
+
+    <EditText
+        android:id="@+id/et_original_word"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_original_word"
+        android:textColor="@color/on_surface"
+        android:textColorHint="@color/text_secondary"
+        android:background="@drawable/bg_input_field"
+        android:padding="12dp"
+        android:inputType="textMultiLine"
+        android:minLines="2"
+        android:maxLines="5"
+        android:textSize="@dimen/text_large"
+        android:gravity="start|top"
+        android:textAlignment="viewStart"
+        android:layout_marginBottom="@dimen/margin_medium" />
+
+    <!-- حقل الاختصار -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="الاختصار"
+        android:textColor="@color/text_secondary"
+        android:textSize="@dimen/text_small"
+        android:layout_marginBottom="6dp" />
+
+    <EditText
+        android:id="@+id/et_shortcut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_shortcut"
+        android:textColor="@color/on_surface"
+        android:textColorHint="@color/text_secondary"
+        android:background="@drawable/bg_input_field"
+        android:padding="12dp"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textSize="@dimen/text_large"
+        android:layout_marginBottom="6dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/example_shortcut_hint"
+        android:textColor="@color/text_secondary"
+        android:textSize="@dimen/text_small"
+        android:fontFamily="monospace"
+        android:layout_marginBottom="@dimen/margin_medium" />
+
+    <!-- رسالة الخطأ -->
+    <TextView
+        android:id="@+id/tv_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/error_color"
+        android:textSize="@dimen/text_small"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/margin_small" />
+
+    <!-- أزرار الحفظ والإلغاء -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_cancel"
+            android:background="@android:color/transparent"
+            android:textColor="@color/text_secondary"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_save"
+            android:background="@drawable/bg_button_primary"
+            android:textColor="@color/on_primary"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp" />
+    </LinearLayout>
+</LinearLayout>

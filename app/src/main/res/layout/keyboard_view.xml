@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- عرض لوحة المفاتيح الرئيسي الذي يُضاف إلى InputMethodService -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/keyboard_background">
+
+    <!-- شريط التلميحات (Suggestions Strip) -->
+    <HorizontalScrollView
+        android:id="@+id/suggestions_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/keyboard_strip_background"
+        android:scrollbars="none"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/suggestions_container"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp" />
+    </HorizontalScrollView>
+
+    <!-- KeyboardView الأساسي -->
+    <android.inputmethodservice.KeyboardView
+        android:id="@+id/keyboard_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:keyBackground="@drawable/key_background"
+        android:keyTextColor="@color/key_text_color"
+        android:keyTextSize="18sp"
+        android:labelTextSize="14sp"
+        android:shadowColor="@android:color/transparent"
+        android:shadowRadius="0"
+        android:keyPreviewLayout="@layout/key_preview"
+        android:background="@color/keyboard_background" />
+
+</LinearLayout>

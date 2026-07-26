@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ألوان لوحة المفاتيح الرئيسية -->
+    <color name="keyboard_background">#1A1A2E</color>
+    <color name="key_normal_background">#16213E</color>
+    <color name="key_special_background">#0F3460</color>
+    <color name="key_action_background">#E94560</color>
+    <color name="key_pressed_background">#533483</color>
+    <color name="key_text_color">#FFFFFF</color>
+    <color name="key_special_text_color">#CCCCCC</color>
+    <color name="key_action_text_color">#FFFFFF</color>
+    <color name="keyboard_strip_background">#0F3460</color>
+
+    <!-- ألوان التطبيق -->
+    <color name="primary">#E94560</color>
+    <color name="primary_dark">#B33047</color>
+    <color name="primary_variant">#533483</color>
+    <color name="secondary">#0F3460</color>
+    <color name="background">#1A1A2E</color>
+    <color name="surface">#16213E</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="on_background">#FFFFFF</color>
+    <color name="on_surface">#FFFFFF</color>
+    <color name="text_secondary">#AAAAAA</color>
+    <color name="divider">#333366</color>
+    <color name="card_background">#16213E</color>
+    <color name="success">#4CAF50</color>
+    <color name="error_color">#F44336</color>
+
+    <!-- ألوان Material -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

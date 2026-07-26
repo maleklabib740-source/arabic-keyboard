@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    لوحة المفاتيح العربية - ترتيب مشابه لـ Gboard
+    الصف الأول:  ض ص ث ق ف غ ع ه خ ح ج د
+    الصف الثاني: ش س ي ب ل ا ت ن م ك ط
+    الصف الثالث: shift | ئ ء ؤ ر ى ة و ز ظ | delete
+    الصف الرابع: 123 | مسافة | . | إدخال
+-->
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keyWidth="8.333%p"
+    android:horizontalGap="0px"
+    android:verticalGap="0px"
+    android:keyHeight="@dimen/key_height">
+
+    <!-- الصف الأول: 12 حرفاً -->
+    <Row>
+        <Key android:codes="1590" android:keyLabel="ض" android:keyEdgeFlags="left" />
+        <Key android:codes="1589" android:keyLabel="ص" />
+        <Key android:codes="1579" android:keyLabel="ث" />
+        <Key android:codes="1602" android:keyLabel="ق" />
+        <Key android:codes="1601" android:keyLabel="ف" />
+        <Key android:codes="1594" android:keyLabel="غ" />
+        <Key android:codes="1593" android:keyLabel="ع" />
+        <Key android:codes="1607" android:keyLabel="ه" />
+        <Key android:codes="1582" android:keyLabel="خ" />
+        <Key android:codes="1581" android:keyLabel="ح" />
+        <Key android:codes="1580" android:keyLabel="ج" />
+        <Key android:codes="1583" android:keyLabel="د" android:keyEdgeFlags="right" />
+    </Row>
+
+    <!-- الصف الثاني: 11 حرفاً مع هامش -->
+    <Row>
+        <Key android:codes="1588" android:keyLabel="ش" android:keyEdgeFlags="left" android:keyWidth="9.09%p" />
+        <Key android:codes="1587" android:keyLabel="س" android:keyWidth="9.09%p" />
+        <Key android:codes="1610" android:keyLabel="ي" android:keyWidth="9.09%p" />
+        <Key android:codes="1576" android:keyLabel="ب" android:keyWidth="9.09%p" />
+        <Key android:codes="1604" android:keyLabel="ل" android:keyWidth="9.09%p" />
+        <Key android:codes="1575" android:keyLabel="ا" android:keyWidth="9.09%p" />
+        <Key android:codes="1578" android:keyLabel="ت" android:keyWidth="9.09%p" />
+        <Key android:codes="1606" android:keyLabel="ن" android:keyWidth="9.09%p" />
+        <Key android:codes="1605" android:keyLabel="م" android:keyWidth="9.09%p" />
+        <Key android:codes="1603" android:keyLabel="ك" android:keyWidth="9.09%p" />
+        <Key android:codes="1591" android:keyLabel="ط" android:keyWidth="9.10%p" android:keyEdgeFlags="right" />
+    </Row>
+
+    <!-- الصف الثالث: shift + 9 حروف + delete -->
+    <Row>
+        <!-- مفتاح Shift -->
+        <Key
+            android:codes="-1"
+            android:keyLabel="⇧"
+            android:keyWidth="13%p"
+            android:keyEdgeFlags="left"
+            android:isModifier="true"
+            android:isSticky="true" />
+
+        <Key android:codes="1574" android:keyLabel="ئ" android:keyWidth="8.5%p" />
+        <Key android:codes="1569" android:keyLabel="ء" android:keyWidth="8.5%p" />
+        <Key android:codes="1572" android:keyLabel="ؤ" android:keyWidth="8.5%p" />
+        <Key android:codes="1585" android:keyLabel="ر" android:keyWidth="8.5%p" />
+        <Key android:codes="1609" android:keyLabel="ى" android:keyWidth="8.5%p" />
+        <Key android:codes="1577" android:keyLabel="ة" android:keyWidth="8.5%p" />
+        <Key android:codes="1608" android:keyLabel="و" android:keyWidth="8.5%p" />
+        <Key android:codes="1586" android:keyLabel="ز" android:keyWidth="8.5%p" />
+        <Key android:codes="1592" android:keyLabel="ظ" android:keyWidth="8.5%p" />
+
+        <!-- مفتاح Delete -->
+        <Key
+            android:codes="-5"
+            android:keyLabel="⌫"
+            android:keyWidth="13%p"
+            android:keyEdgeFlags="right"
+            android:isRepeatable="true" />
+    </Row>
+
+    <!-- الصف الرابع: 123 + مسافة + . + إدخال -->
+    <Row android:rowEdgeFlags="bottom">
+        <!-- تبديل إلى الأرقام والرموز -->
+        <Key
+            android:codes="-3"
+            android:keyLabel="؟123"
+            android:keyWidth="20%p"
+            android:keyEdgeFlags="left" />
+
+        <!-- تبديل إلى الإنجليزية -->
+        <Key
+            android:codes="-10"
+            android:keyLabel="EN"
+            android:keyWidth="15%p" />
+
+        <!-- مسافة -->
+        <Key
+            android:codes="32"
+            android:keyLabel="مسافة"
+            android:keyWidth="30%p"
+            android:isRepeatable="false" />
+
+        <!-- نقطة -->
+        <Key
+            android:codes="46"
+            android:keyLabel="."
+            android:keyWidth="10%p" />
+
+        <!-- إدخال -->
+        <Key
+            android:codes="-4"
+            android:keyLabel="↵"
+            android:keyWidth="25%p"
+            android:keyEdgeFlags="right" />
+    </Row>
+
+</Keyboard>

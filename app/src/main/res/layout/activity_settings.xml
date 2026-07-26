@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- شاشة الإعدادات: تعرض 3 أقسام (Shortcuts, Space Replacement, Auto Typing) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- ActionBar مخصص -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/secondary"
+        app:title="@string/settings_title"
+        app:titleTextColor="@color/on_background"
+        app:navigationIconTint="@color/on_background" />
+
+    <!-- Tabs للتنقل بين الأقسام -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/secondary"
+        app:tabSelectedTextColor="@color/primary"
+        app:tabUnselectedTextColor="@color/text_secondary"
+        app:tabIndicatorColor="@color/primary"
+        app:tabMode="fixed" />
+
+    <!-- محتوى الـ Tab المختار -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

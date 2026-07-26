@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- معاينة المفتاح عند الضغط (bubble يظهر فوق المفتاح) -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/key_special_background"
+    android:gravity="center"
+    android:minWidth="40dp"
+    android:minHeight="48dp"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
+    android:textColor="@color/key_text_color"
+    android:textSize="22sp"
+    android:textStyle="bold" />
