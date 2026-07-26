@@ -22,28 +22,41 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: gradle
 
-      # 3. منح صلاحيات التنفيذ لـ gradlew
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
+      # 3. تخزين مؤقت لـ Gradle لتسريع البناء
+      - name: Cache Gradle packages
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
 
-      # 4. بناء الـ APK (Debug)
+      # 4. منح صلاحية التنفيذ لـ gradlew
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
+      # 5. التحقق من صحة الـ wrapper
+      - name: Validate Gradle wrapper
+        uses: gradle/actions/wrapper-validation@v3
+
+      # 6. بناء Debug APK
       - name: Build Debug APK
-        run: ./gradlew assembleDebug --stacktrace
+        run: ./gradlew assembleDebug --stacktrace --no-daemon
 
-      # 5. رفع الـ APK كـ Artifact قابل للتحميل
+      # 7. رفع الـ APK كـ Artifact
       - name: Upload Debug APK
         uses: actions/upload-artifact@v4
         with:
-          name: arabic-keyboard-debug
+          name: arabic-keyboard-debug-${{ github.run_number }}
           path: app/build/outputs/apk/debug/app-debug.apk
           retention-days: 30
 
   release:
-    name: Build & Release APK (on tag)
+    name: Release APK on Tag
     runs-on: ubuntu-latest
-    # يعمل فقط عند إنشاء Git tag مثل v1.0.0
     if: startsWith(github.ref, 'refs/tags/v')
 
     steps:
@@ -55,16 +68,26 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: gradle
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
+      - name: Cache Gradle packages
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
 
-      # بناء Release APK (غير موقَّع)
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
+      - name: Validate Gradle wrapper
+        uses: gradle/actions/wrapper-validation@v3
+
       - name: Build Release APK
-        run: ./gradlew assembleRelease --stacktrace
+        run: ./gradlew assembleRelease --no-daemon
 
-      # نشر APK في GitHub Releases تلقائياً
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
@@ -74,9 +97,8 @@ jobs:
             ## لوحة مفاتيح عربية ${{ github.ref_name }}
 
             ### التثبيت
-            1. حمّل ملف APK
-            2. فعّل "تثبيت من مصادر غير معروفة" في إعدادات هاتفك
-            3. ثبّت الـ APK
-            4. افتح التطبيق واتبع خطوات التفعيل
+            1. حمّل الـ APK
+            2. فعّل «تثبيت من مصادر غير معروفة» في إعدادات هاتفك
+            3. ثبّت الـ APK وافتح التطبيق
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
